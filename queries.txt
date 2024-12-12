@@ -1,0 +1,20 @@
+-- View All Books in the Database
+SELECT * FROM books;
+
+
+-- Get Books with a Specific Rating
+SELECT * FROM books
+WHERE rating = 5;
+
+-- Get Books in a Specific Price Range
+SELECT * FROM books
+WHERE price BETWEEN 50 AND 55;
+
+-- Get Top 5 Most Expensive Books
+SELECT * FROM books
+ORDER BY price DESC
+LIMIT 5;
+-- Count the Number of Books in Each Price Category
+SELECT price_category, COUNT(*) AS book_count
+FROM books
+GROUP BY price_category;
